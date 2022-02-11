@@ -28,5 +28,8 @@ async def amnick(ctx, member: discord.Member, text):
         i = (i + 1)%3
         time.sleep(0.2)
     # await ctx.send(f'Nickname was changed for {member.mention} ')
-
-bot.run('my token')
+print("Start bot")
+f = open('token.txt')
+token = f.readline()
+f.close()
+bot.run(token)
